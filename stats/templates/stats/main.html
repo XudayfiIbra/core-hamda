@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if qs %}
+
+<ul>
+    {% for el in qs %}
+        <li><a href="{{el.get_absolute_url}}">{{ el.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
