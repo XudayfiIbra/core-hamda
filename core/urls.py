@@ -8,6 +8,5 @@ from stats import consumer
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('stats.urls')),
-    path('admin/', admin.site.urls),
     re_path(r'ws/test-stat/$', consumer.DashboardConsumer.as_asgi()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
